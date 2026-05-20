@@ -40,7 +40,8 @@ const DADOS = {
     "31": [
       "Atividade 1 - Armazenamento e memória",
       "Atividade 2 - Editor de texto",
-      "Atividade 3 - Arquivos e pastas"
+      "Atividade 3 - Arquivos e pastas",
+      "Atividade 4 - teste"
     ],
 
     "32": [
