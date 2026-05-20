@@ -9,6 +9,7 @@ const notaFinalEl = document.getElementById("notaFinal");
 const mensagemEl = document.getElementById("mensagem");
 const statusAlunoEl = document.getElementById("statusAluno");
 const contadorRegistrosEl = document.getElementById("contadorRegistros");
+const btnExcluir = document.getElementById("btnExcluir");
 
 let alunos = [];
 let alunosFiltrados = [];
@@ -28,6 +29,7 @@ function iniciar() {
 }
 
 function configurarEventos() {
+  btnExcluir.addEventListener("click", excluirAvaliacao);    
   filtroTurma.addEventListener("change", aplicarFiltros);
   pesquisaAluno.addEventListener("input", aplicarFiltros);
 
@@ -353,6 +355,62 @@ function limparConceitos() {
   document.querySelectorAll(".conceito-btn").forEach(btn => btn.classList.remove("ativo"));
   calcularNota();
   mensagemEl.textContent = "Conceitos limpos na tela. Clique em salvar para atualizar o Supabase.";
+}
+async function excluirAvaliacao() {
+
+  const aluno = getAlunoAtual();
+
+  if (!aluno) {
+    mensagemEl.textContent =
+      "Selecione um aluno.";
+    return;
+  }
+
+  const confirmar = confirm(
+    `Excluir avaliação de ${aluno.nome}?`
+  );
+
+  if (!confirmar) return;
+
+  try {
+
+    conferirSupabase();
+
+    mensagemEl.textContent =
+      "Excluindo avaliação...";
+
+    const { error } = await supabaseClient
+      .from("avaliacoes_qualitativas")
+      .delete()
+      .eq("aluno_id", Number(aluno.id))
+      .eq("ano_letivo", anoSelect.value)
+      .eq("trimestre", trimestreSelect.value);
+
+    if (error) throw error;
+
+    avaliacao = {};
+
+    document
+      .querySelectorAll(".conceito-btn")
+      .forEach(btn => {
+        btn.classList.remove("ativo");
+      });
+
+    calcularNota();
+
+    mensagemEl.textContent =
+      "Avaliação excluída com sucesso.";
+
+  } catch (erro) {
+
+    console.error(
+      "Erro ao excluir:",
+      erro
+    );
+
+    mensagemEl.textContent =
+      "Erro ao excluir avaliação.";
+  }
 }
 
 async function salvarAvaliacao() {
