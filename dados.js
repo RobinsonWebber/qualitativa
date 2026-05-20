@@ -38,44 +38,45 @@ const DADOS = {
   */
   atividadesPorTurma: {
     "31": [
-      "Atividade 1 - Armazenamento e memória",
-      "Atividade 2 - Editor de texto",
-      "Atividade 3 - Arquivos e pastas"
+      "Atividade 1 - Editor de texto",
+      "Atividade 2 - internet e navegadores",
+      "Atividade 3 - Segurança digital"
     ],
 
     "32": [
-      "Atividade 1 - Armazenamento e memória",
-      "Atividade 2 - Editor de texto"
+      "Atividade 1 - Editor de texto",
+      "Atividade 2 - internet e navegadores",
+      "Atividade 3 - Segurança digital"
     ],
 
     "33": [
-      "Atividade 1 - Armazenamento e memória",
-      "Atividade 2 - Editor de texto",
-      "Atividade 3 - Arquivos e pastas"
+      "Atividade 1 - Editor de texto",
+      "Atividade 2 - internet e navegadores",
+      "Atividade 3 - Segurança digital"
     ],
 
     "34": [
-      "Atividade 1 - Armazenamento e memória",
-      "Atividade 2 - Editor de texto"
+      "Atividade 1 - Editor de texto",
+      "Atividade 2 - internet e navegadores",
+      "Atividade 3 - Segurança digital"
     ],
 
     "41": [
-      "Atividade 1 - Codificação binária",
-      "Atividade 2 - Tabela ASCII",
-      "Atividade 3 - Armazenamento de dados",
-      "Atividade 4 - Revisão prática"
+      "Atividade 1 - Editor de texto",
+      "Atividade 2 - Planilhas",
+      "Atividade 3 - Pesquisa na internet"
     ],
 
     "42": [
-      "Atividade 1 - Codificação binária",
-      "Atividade 2 - Tabela ASCII",
-      "Atividade 3 - Armazenamento de dados"
+      "Atividade 1 - Editor de texto",
+      "Atividade 2 - Planilhas",
+      "Atividade 3 - Pesquisa na internet"
     ],
 
     "43": [
-      "Atividade 1 - Codificação binária",
-      "Atividade 2 - Tabela ASCII",
-      "Atividade 3 - Armazenamento de dados"
+      "Atividade 1 - Editor de texto",
+      "Atividade 2 - Planilhas",
+      "Atividade 3 - Pesquisa na internet"
     ]
   }
 };
