@@ -230,3 +230,12 @@ button:disabled {
 .btn-danger:hover{
   background:#b91c1c;
 }
+
+#btnSalvar{
+  background:#16a34a;
+  color:#fff;
+}
+
+#btnSalvar:hover{
+  background:#15803d;
+}
