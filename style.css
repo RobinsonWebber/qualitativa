@@ -221,3 +221,12 @@ button:disabled {
     grid-template-columns: 1fr;
   }
 }
+
+.btn-danger{
+  background:#dc2626;
+  color:#fff;
+}
+
+.btn-danger:hover{
+  background:#b91c1c;
+}
